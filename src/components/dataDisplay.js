@@ -1,25 +1,7 @@
 import StudentTable from "./StudentTable";
 import React, { useState } from "react";
 const DataDisplay = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState("");
-  const [city, setCity] = useState("");
-  const [requestParams, setRequestParams] = useState({
-    name: "",
-    email: "",
-    city: "",
-  });
   const [entryList, setEntryList] = useState([]);
-
-  const ChangeName = (event) => {
-    setName(event.target.value);
-  };
-  const ChangeEmail = (event) => {
-    setEmail(event.target.value);
-  };
-  const ChangeCity = (event) => {
-    setCity(event.target.value);
-  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -43,20 +25,15 @@ const DataDisplay = () => {
           <div className="tbl-box">
             <div>
               <label htmlFor="name">Name</label>
-              <input type="text" id="name" name="name" onChange={ChangeName} />
+              <input type="text" id="name" name="name" />
             </div>
             <div>
               <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                onChange={ChangeEmail}
-              />
+              <input type="email" id="email" name="email" />
             </div>
             <div>
               <label htmlFor="city">City</label>
-              <input type="text" id="city" name="city" onChange={ChangeCity} />
+              <input type="text" id="city" name="city" />
             </div>
             <div>
               <button type="submit">Add Record</button>

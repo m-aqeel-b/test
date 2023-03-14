@@ -118,7 +118,69 @@ body.active .wrapper .section {
   margin-left: 0;
   width: 100%;
 }
+.tbl{
+  border-collapse: collapse;
+}
 .tbl-box {
   display: flex;
   justify-content: space-evenly;
+}
+
+
+.w-100{
+  width: 100%;
+}
+.w-50{
+  width: 50%;
+}
+.w-10{
+  width: 10%;
+}
+.w-20{
+  width: 20%;
+}
+.w-30{
+  width: 30%;
+}
+.w-80{
+  width: 80%;
+}
+.tbl-header{
+  background-color: #0769b9;
+  height: 2.5rem;
+    color: white;
+    
+}
+
+.ml-5{
+  margin-left: 5px;;
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+
+.tbl-row{
+  height: 2rem;
+}
+.tbl-row td{
+  border-bottom:2px solid #f5f6fa;
+}
+
+.std-heading{
+  margin: 16px;
+  margin-left: 0px;
+  letter-spacing: 2px;
+}
+
+.btn-submit{
+  background: #0769b9;
+    color: white;
+    padding: 6px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
 }

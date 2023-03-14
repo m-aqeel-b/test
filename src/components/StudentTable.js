@@ -1,34 +1,42 @@
 const StudentTable = ({ props }) => {
   console.log(props.length);
+
   var srNo = 0;
   return (
     <div>
-      <h3>List of Students:</h3>
+      <h2 className="std-heading">List of Students:</h2>
+
       <div>
         {!props.length ? (
-          <div>
-            <h2>No Records Found..!</h2>
+          <div className="text-center">
+            <img
+              src="../images/no-record.svg"
+              alt="no-record"
+              style={{ height: "150px" }}
+            />
           </div>
         ) : (
-          <table border="true">
-            <tr>
-              <th>Sr.No</th>
+          <table className="w-100 tbl">
+            <tr className="tbl-header text-left">
+              <th className="w-10 text-center">#</th>
               <th>Name</th>
               <th>Email</th>
-              <th>City</th>
+              <th className="w-20">City</th>
             </tr>
-            {props.map((std, index) => {
-              return (
-                <tbody key={index}>
-                  <tr>
-                    <td>{++srNo}</td>
+            <tbody>
+              {props.map((std, index) => {
+                return (
+                  <tr key={index} className="tbl-row">
+                    <td className="text-center" style={{ fontWeight: "bold" }}>
+                      {++srNo}
+                    </td>
                     <td>{std.name}</td>
                     <td>{std.email}</td>
                     <td>{std.city}</td>
                   </tr>
-                </tbody>
-              );
-            })}
+                );
+              })}
+            </tbody>
           </table>
         )}
       </div>
